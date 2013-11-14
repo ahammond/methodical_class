@@ -28,7 +28,7 @@ class MethodicalType(type):
             # TODO: I might also be able to dynamically mangle the calling parameters to prepend method.
             # The idea here would be to have method implicitly declared as a formal parameter.
             # I'm not convinced this is a good idea.
-            return method_reference(self, method_reference, *args, **kwargs)
+            return method_reference(self, *args, method=method_reference, **kwargs)
         return wrapper
 
 
